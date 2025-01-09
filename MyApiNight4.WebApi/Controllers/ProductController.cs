@@ -42,10 +42,16 @@ namespace MyApiNight4.WebApi.Controllers
         }
 
         [HttpPut]
-        public IActionResult UpdateProduct( Product product)
+        public IActionResult UpdateProduct(Product product)
         {
             _productService.TUpdate(product);
             return Ok("Güncelleme başarılı");
+        }
+
+        [HttpGet("ProductCount")]
+        public IActionResult ProductCount()
+        {
+            return Ok(_productService.TGetProductCount());
         }
     }
 }
