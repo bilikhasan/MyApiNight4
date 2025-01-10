@@ -43,5 +43,17 @@ namespace MyApiNight4.WebUI.Controllers
             }
             return View();
         }
+
+        public async Task<IActionResult> DeleteCategory(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.DeleteAsync("https://localhost:7039/api/Category?id=" + id);
+            if(responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("CategoryList");
+            }
+            return View();
+
+        }
     }
 }
