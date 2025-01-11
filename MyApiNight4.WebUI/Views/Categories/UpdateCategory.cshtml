@@ -1,4 +1,4 @@
-﻿@model MyApiNight4.WebUI.Dtos.CreateCategoryDto
+﻿@model MyApiNight4.WebUI.Dtos.UpdateCategoryDto
 
 @{
     Layout = null;
@@ -8,10 +8,11 @@
 
 <form method="post">
     <div class="container">
-        <br /><br />
+        <br /> <br />
+        <input type="hidden" asp-for="CategoryId" />
         <label>Kategori Adı</label>
         <input type="text" asp-for="CategoryName" class="form-control" />
         <br />
-        <button class="btn btn-primary">Kategori Ekle</button>
+        <button class="btn btn-success">Kategoriyi Güncelle</button>
     </div>
 </form>
