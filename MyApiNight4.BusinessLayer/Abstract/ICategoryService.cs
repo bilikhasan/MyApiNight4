@@ -9,5 +9,7 @@ namespace MyApiNight4.BusinessLayer.Abstract
 {
     public interface ICategoryService :IGenericService<Category>
     {
+        public int TGetCategoryCount();
+
     }
 }

@@ -30,6 +30,12 @@ namespace MyApiNight4.BusinessLayer.Concrete
         {
             return _categoryDal.GetById(id);
         }
+
+        public int TGetCategoryCount()
+        {
+            return _categoryDal.GetCategoryCount();
+        }
+
         public void TInsert(Category entity)
         {
             _categoryDal.Insert(entity);

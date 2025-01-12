@@ -9,5 +9,6 @@ namespace MyApiNight4.DataAccessLayer.Abstract
 {
     public interface ICategoryDal : IGenericDal<Category>
     {
+        int GetCategoryCount();
     }
 }
