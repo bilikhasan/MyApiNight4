@@ -12,5 +12,8 @@ namespace MyApiNight4.EntityLayer.Concrete
         public string CategoryName { get; set; }
 
 
+
+
+        public List<Book>? Books { get; set; }
     }
 }

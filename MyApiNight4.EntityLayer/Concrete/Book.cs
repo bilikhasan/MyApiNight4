@@ -13,5 +13,13 @@ namespace MyApiNight4.EntityLayer.Concrete
         public decimal BookPrice { get; set; }
         public int BookPageCount { get; set; }
         public string BookImageUrl { get; set; }
+
+
+
+        public int AuthorId { get; set; }
+        public Author? Author { get; set; }
+
+        public int CategoryId { get; set; }
+        public Category? Category { get; set; }
     }
 }

@@ -1,9 +1,13 @@
+using Microsoft.AspNetCore.Authorization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 
 builder.Services.AddHttpClient();       //HttpClient ta constructor ekledýgýmýz ýcýn buraya ekledýk bunu. Gorsun dýye kopruyu
+
+
 
 
 

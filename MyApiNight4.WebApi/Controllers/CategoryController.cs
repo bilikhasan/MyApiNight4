@@ -16,7 +16,7 @@ namespace MyApiNight4.WebApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult CatgoryList()
+        public IActionResult CategoryList()
         {
             var values = _categoryService.TGetAll();
             return Ok(values);
