@@ -48,9 +48,40 @@ namespace MyApiNight4.WebUI.Controllers
 
         public async Task<IActionResult> DeleteFeature(int id)
         {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.DeleteAsync("https://localhost:7039/api/Feature?id=" + id);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("FeatureList");
+            }
             return View();
-            
-            //SİLME İŞLEMİ YAP
+        }
+        [HttpGet]
+        public async Task<IActionResult> UpdateFeature(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync("https://localhost:7039/api/Feature/GetFeature?id=" + id);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<UpdateFeatureDto>(jsonData);
+                return View(values);
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateFeature(UpdateFeatureDto updateFeatureDto)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(updateFeatureDto);
+            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMessage = await client.PutAsync("https://localhost:7039/api/Feature", stringContent);
+            if(responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("FeatureList");
+            }
+            return View();
         }
     }
 }
