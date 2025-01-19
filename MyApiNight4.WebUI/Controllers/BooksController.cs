@@ -7,7 +7,8 @@ namespace MyApiNight4.WebUI.Controllers
 {
     public class BooksController : Controller
     {
-        private IHttpClientFactory _httpClientFactory;
+        private readonly IHttpClientFactory _httpClientFactory;
+
         public BooksController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;

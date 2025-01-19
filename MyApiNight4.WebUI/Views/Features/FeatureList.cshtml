@@ -1,0 +1,37 @@
+﻿@model List<MyApiNight4.WebUI.Dtos.ResultFeatureDto>
+
+@{
+    ViewData["Title"] = "FeatureList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>Öne Çıkanlar Listesi</h4>
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<form method="post">
+    <div class="container">
+        <br /> <br />
+        <table class="table table-bordered">
+            <tr>
+                <th>#</th>
+                <th>Kitap Adı</th>
+                <th>Kitap Açıklama</th>
+                <th>Resim </th>
+                <th>Sil</th>
+                <th>Güncelle</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.FeatureId</td>
+                    <td>@item.FeatureBookName</td>
+                    <td>@item.FeatureDescription.Substring(0, 200)...</td>
+                    <td><img src="@item.FeatureImageUrl" style="width:100px; height:100px; border:3px solid#0075ff;" /></td>
+                    <td><a href="/Features/DeleteFeature/@item.FeatureId" class="btn btn-danger">Sil</a></td>
+                    <td><a href="/Features/UpdateFeature/@item.FeatureId" class="btn btn-success">Güncelle</a></td>
+                </tr>
+            }
+        </table>
+        <a href="/Features/CreateFeature" class="btn btn-primary">Yeni Öne Çıkan Ekle</a>
+    </div>
+</form>

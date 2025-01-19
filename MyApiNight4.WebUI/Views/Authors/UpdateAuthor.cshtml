@@ -1,0 +1,35 @@
+﻿@model MyApiNight4.WebUI.Dtos.UpdateAuthorDto
+
+@{
+    ViewData["Title"] = "UpdateAuthor";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<h4>Yazar Güncelleme Sayfası</h4>
+
+
+<form method="post">
+    <div class="container">
+        <br /><br />
+        <input type="hidden" asp-for="AuthorId"/>
+        <label>Yazar Ad</label>
+        <input type="text" class="form-control" asp-for="AuthorName" />
+        <br />
+
+        <label>Yazar Soyad</label>
+        <input type="text" class="form-control" asp-for="AuthorSurname" />
+        <br />
+
+        <label>Hakkında</label>
+        <textarea asp-for="AuthorAbout" class="form-control" rows="5"></textarea>
+        <br />
+
+        <label>Resim</label>
+        <input type="text" class="form-control" asp-for="AuthorImageUrl" />
+        <br />
+        <button class="btn btn-warning">Yazar Güncelle</button>
+    </div>
+</form>
+

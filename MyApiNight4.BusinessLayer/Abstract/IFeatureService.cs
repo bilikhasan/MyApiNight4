@@ -9,5 +9,7 @@ namespace MyApiNight4.BusinessLayer.Abstract
 {
     public interface IFeatureService : IGenericService<Feature>
     {
+        public List<Feature> TGetLastFourBooks();
+
     }
 }

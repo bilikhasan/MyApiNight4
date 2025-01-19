@@ -16,5 +16,12 @@ namespace MyApiNight4.DataAccessLayer.EntityFramework
         public EfFeatureDal(ApiContext context) : base(context)
         {
         }
+
+        public List<Feature> GetLastFourBooks()
+        {
+            var context = new ApiContext();
+            var values = context.Features.OrderByDescending(x => x.FeatureId).Take(4).ToList();
+            return values;
+        }
     }
 }

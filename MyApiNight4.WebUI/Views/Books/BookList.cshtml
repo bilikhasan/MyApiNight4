@@ -1,0 +1,45 @@
+﻿@model List<MyApiNight4.WebUI.Dtos.ResultBookDto>
+
+@{
+    ViewData["Title"] = "BookList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>Kitap Listesi</h4>
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<div class="container">
+    <br /> <br>
+    <table class="table table-hover table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Sayfa Sayısı</th>
+            <th>Image</th>
+            <th>Yazar Adı</th>
+            <th>Kategori</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.BookId</th>
+                <td>@item.BookName</td>
+                <td>@item.BookPrice</td>
+                <td>@item.BookPageCount</td>
+                <td><img src="@item.BookImageUrl" style="width:100px; height:100px; border-radius: 50%; border:5px solid#0075ff;" /></td>
+                <td>@item.AuthorId</td>
+                <td>@item.CategoryId</td>
+                <td><a href="/Books/DeleteBook/@item.BookId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Books/UpdateBook/@item.BookId" class="btn btn-warning">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Books/CreateBook/" class="btn btn-primary">Yeni Kitap Ekle</a>
+    <br /><br />
+</div>

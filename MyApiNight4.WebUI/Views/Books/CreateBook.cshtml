@@ -1,0 +1,41 @@
+﻿@model MyApiNight4.WebUI.Dtos.CreateBookDto
+
+@{
+    ViewData["Title"] = "CreateBook";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<h4>Yeni Kitap Ekle</h4>
+
+<form method="post">
+    <div class="container">
+        <br /><br />
+        <label>Kitap Adı</label>
+        <input type="text" class="form-control" asp-for="BookName" />
+        <br />
+
+        <label>Fiyat</label>
+        <input type="number" class="form-control" asp-for="BookPrice" />
+        <br />
+
+        <label>Sayfa Sayısı</label>
+        <input type="number" class="form-control" asp-for="BookPageCount" />
+        <br />
+
+        <label>Resim</label>
+        <input type="text" class="form-control" asp-for="BookImageUrl" />
+        <br />
+
+        <label>Yazar</label>
+        <input type="number" class="form-control" asp-for="AuthorId" />
+        <br />
+
+        <label>Kategori</label>
+        <input type="number" class="form-control" asp-for="CategoryId" />
+        <br />
+
+
+        <button class="btn btn-primary">Yeni Kitap Ekle</button>
+    </div>
+</form>

@@ -49,5 +49,13 @@ namespace MyApiNight4.WebApi.Controllers
             var value = _featureService.TGetById(id);
             return Ok(value);
         }
+
+
+        [HttpGet("GetLastFourBooks")]
+        public IActionResult GetLastFourBooks()
+        {
+            var value = _featureService.TGetLastFourBooks();
+            return Ok(value);
+        }
     }
 }

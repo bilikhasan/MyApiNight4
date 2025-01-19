@@ -31,6 +31,11 @@ namespace MyApiNight4.BusinessLayer.Concrete
             return _featureDal.GetById(id);
         }
 
+        public List<Feature> TGetLastFourBooks()
+        {
+            return _featureDal.GetLastFourBooks();
+        }
+
         public void TInsert(Feature entity)
         {
             _featureDal.Insert(entity);

@@ -1,5 +1,7 @@
 ﻿
 
+using MyApiNight4.EntityLayer.Concrete;
+
 namespace MyApiNight4.WebUI.Dtos 
 {
     public class UpdateBookDto
@@ -16,6 +18,8 @@ namespace MyApiNight4.WebUI.Dtos
 
 
         public int AuthorId { get; set; }
+        public Author Author { get; set; }
         public int CategoryId { get; set; }
+        public Category Category { get; set; }
     }
 }
