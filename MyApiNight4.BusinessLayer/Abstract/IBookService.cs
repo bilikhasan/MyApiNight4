@@ -9,5 +9,7 @@ namespace MyApiNight4.BusinessLayer.Abstract
 {
     public interface IBookService :IGenericService<Book>
     {
+        public Book TGetRandomBooks();
+
     }
 }

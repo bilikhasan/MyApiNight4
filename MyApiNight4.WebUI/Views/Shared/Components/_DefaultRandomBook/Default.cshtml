@@ -1,0 +1,47 @@
+﻿@model MyApiNight4.WebUI.Dtos.GetRandomBookDto
+
+<section id="best-selling" class="leaf-pattern-overlay">
+	<div class="corner-pattern-overlay"></div>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-6">
+						<figure class="products-thumb">
+							<img src="@Model.BookImageUrl" alt="book" class="single-image">
+						</figure>
+					</div>
+					<div class="col-md-6">
+						<div class="product-entry">
+							<h2 class="section-title divider">Editör Önerisi</h2>
+
+							<div class="products-content">
+
+@* 								<div class="author-name">Yazar: @Model.Author.AuthorName @Model.Author.AuthorSurname </div>
+ *@
+
+								<h3 class="item-title">@Model.BookName</h3>
+								<p>
+
+
+@* 									<b>Kategori Adı:</b>@Model.Category.CategoryName
+ *@									
+
+									<br />
+									<b>Sayfa Sayısı:</b> @Model.BookPageCount
+								</p>
+								<div class="item-price"> @Model.BookPrice ₺</div>
+								<div class="btn-wrap">
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<!-- / row -->
+			</div>
+		</div>
+	</div>
+</section>
+

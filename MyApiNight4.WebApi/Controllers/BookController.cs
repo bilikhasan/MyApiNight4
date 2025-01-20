@@ -49,5 +49,16 @@ namespace MyApiNight4.WebApi.Controllers
             var values = _bookService.TGetById(id);
             return Ok(values);
         }
+
+        [HttpGet("GetRandomBook")]                                            //APİ KATMANI
+        public IActionResult GetRandomBook()
+        {
+            var book = _bookService.TGetRandomBooks();
+            if (book == null)
+            {
+                return NotFound("Kitap bulunamadı.");
+            }
+            return Ok(book);
+        }
     }
 }

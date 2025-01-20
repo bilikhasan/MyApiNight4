@@ -30,6 +30,11 @@ namespace MyApiNight4.BusinessLayer.Concrete
             return _bookDal.GetById(id);
         }
 
+        public Book TGetRandomBooks()
+        {
+            return _bookDal.GetRandomBooks();
+        }
+
         public void TInsert(Book entity)
         {
             _bookDal.Insert(entity);

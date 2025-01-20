@@ -16,6 +16,19 @@ namespace MyApiNight4.DataAccessLayer.EntityFramework
 
         public EfBookDal(ApiContext context) : base(context)
         {
+            _context = context;
+        }
+
+        public Book GetRandomBooks()
+        {
+            int count = _context.Set<Book>().Count();
+            Random random = new Random();
+            int randomIndex = new Random().Next(1, count);
+            var values = _context.Set<Book>()
+                .Skip(randomIndex)
+                .Take(1)
+                .FirstOrDefault();
+            return values;
         }
     }
 }
