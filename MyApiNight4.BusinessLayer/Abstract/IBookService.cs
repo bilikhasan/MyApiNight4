@@ -16,7 +16,7 @@ namespace MyApiNight4.BusinessLayer.Abstract
         public List<Book> TGetPopularBooksAdventure();
         public List<Book> TGetPopularBooksRomantic();
         public List<Book> TGetPopularBooksTechnology();
-
+        public List<Book> TGetPopularBooksFictional();
 
     }
 }

@@ -33,6 +33,13 @@ namespace MyApiNight4.DataAccessLayer.EntityFramework
             return values;
         }
 
+        public List<Book> GetPopularBooksFictional()
+        {
+            var context = new ApiContext();
+            var values = context.Books.Where(x => x.Category.CategoryName == "Bilim-Kurgu").ToList();
+            return values;
+        }
+
         public List<Book> GetPopularBooksRomantic()
         {
             var context = new ApiContext();

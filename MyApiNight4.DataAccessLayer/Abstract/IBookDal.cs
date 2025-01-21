@@ -17,6 +17,7 @@ namespace MyApiNight4.DataAccessLayer.Abstract
         List<Book> GetPopularBooksAdventure();
         List<Book> GetPopularBooksRomantic();
         List<Book> GetPopularBooksTechnology();
+        List<Book> GetPopularBooksFictional();
 
     }
 }
