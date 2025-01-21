@@ -19,6 +19,27 @@ namespace MyApiNight4.DataAccessLayer.EntityFramework
             _context = context;
         }
 
+        public List<Book> GetPopularBooksAdventure()
+        {
+            var context = new ApiContext();
+            var values = context.Books.Where(x => x.Category.CategoryName == "Macera - Aksiyon").ToList();
+            return values;
+        }
+
+        public List<Book> GetPopularBooksBusiness()
+        {
+            var context = new ApiContext();
+            var values = context.Books.Where(x => x.Category.CategoryName == "İş Dünyası").ToList();
+            return values;
+        }
+
+        public List<Book> GetPopularBooksRomantic()
+        {
+            var context = new ApiContext();
+            var values = context.Books.Where(x => x.Category.CategoryName == "Romantik - Aşk").ToList();
+            return values;
+        }
+
         public Book GetRandomBooks()
         {
             int count = _context.Set<Book>().Count();

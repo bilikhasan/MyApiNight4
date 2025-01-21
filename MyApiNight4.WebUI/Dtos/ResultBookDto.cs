@@ -1,4 +1,6 @@
-﻿namespace MyApiNight4.WebUI.Dtos
+﻿using MyApiNight4.EntityLayer.Concrete;
+
+namespace MyApiNight4.WebUI.Dtos
 {
     public class ResultBookDto
     {
@@ -11,9 +13,14 @@
 
 
 
-        public int AuthorId { get; set; }
-        public int CategoryId { get; set; }
+        //public int AuthorId { get; set; }
+        //public int CategoryId { get; set; }
 
 
+
+        public int? AuthorId { get; set; }
+        public Author Author { get; set; }
+        public int? CategoryId { get; set; }
+        public Category Category { get; set; }
     }
 }

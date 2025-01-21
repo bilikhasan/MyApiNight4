@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MyApiNight4.BusinessLayer\MyApiNight4.BusinessLayer.csproj" />
     <ProjectReference Include="..\MyApiNight4.WebApi\MyApiNight4.WebApi.csproj" />
   </ItemGroup>
 

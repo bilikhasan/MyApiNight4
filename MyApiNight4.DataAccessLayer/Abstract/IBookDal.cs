@@ -10,5 +10,13 @@ namespace MyApiNight4.DataAccessLayer.Abstract
     public interface IBookDal :IGenericDal<Book>
     {
         Book GetRandomBooks();
+
+
+
+        List<Book> GetPopularBooksBusiness();
+        List<Book> GetPopularBooksAdventure();
+        List<Book> GetPopularBooksRomantic();
+
+
     }
 }

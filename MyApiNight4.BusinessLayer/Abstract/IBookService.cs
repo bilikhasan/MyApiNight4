@@ -7,9 +7,17 @@ using System.Threading.Tasks;
 
 namespace MyApiNight4.BusinessLayer.Abstract
 {
-    public interface IBookService :IGenericService<Book>
+    public interface IBookService : IGenericService<Book>
     {
         public Book TGetRandomBooks();
+
+
+        public List<Book> TGetPopularBooksBusiness();
+        public List<Book> TGetPopularBooksAdventure();
+        public List<Book> TGetPopularBooksRomantic();
+
+
+
 
     }
 }

@@ -60,5 +60,26 @@ namespace MyApiNight4.WebApi.Controllers
             }
             return Ok(book);
         }
+
+        [HttpGet("GetPopularBooksBusiness")]
+        public IActionResult GetPopularBooksBusiness()
+        {
+            var values = _bookService.TGetPopularBooksBusiness();
+            return Ok(values);
+        }
+
+        [HttpGet("GetPopularBooksAdventure")]
+        public IActionResult GetPopularBooksAdventure()
+        {
+            var values = _bookService.TGetPopularBooksAdventure();
+            return Ok(values);
+        }
+
+        [HttpGet("GetPopularBooksRomantic")]
+        public IActionResult GetPopularBooksRomantic()
+        {
+            var values = _bookService.TGetPopularBooksRomantic();
+            return Ok(values);
+        }
     }
 }
