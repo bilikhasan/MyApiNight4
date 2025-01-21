@@ -1,6 +1,5 @@
 ﻿@model List<MyApiNight4.WebUI.Dtos.ResultBookDto>
 
-
 <div id="adventure" data-tab-content>
     <div class="row">
         @foreach (var item in Model)
@@ -15,19 +14,15 @@
                     </figure>
                     <figcaption>
                         <h3>@item.BookName</h3>
-                        
-@*                         <span>Armor Ramsey</span>
- *@                        
-                        
-                        
+
+                        <span><b>Sayfa Sayısı:</b> @item.BookPageCount</span>
+
+
+
                         <div class="item-price">@item.BookPrice ₺ </div>
                     </figcaption>
                 </div>
             </div>
         }
-
-
-
-
     </div>
 </div>

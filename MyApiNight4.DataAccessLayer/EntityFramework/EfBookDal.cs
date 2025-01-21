@@ -40,6 +40,13 @@ namespace MyApiNight4.DataAccessLayer.EntityFramework
             return values;
         }
 
+        public List<Book> GetPopularBooksTechnology()
+        {
+            var context = new ApiContext();
+            var values = context.Books.Where(x => x.Category.CategoryName == "Teknoloji - Bilim").ToList();
+            return values;
+        }
+
         public Book GetRandomBooks()
         {
             int count = _context.Set<Book>().Count();

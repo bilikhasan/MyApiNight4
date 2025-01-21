@@ -45,6 +45,11 @@ namespace MyApiNight4.BusinessLayer.Concrete
             return _bookDal.GetPopularBooksRomantic();
         }
 
+        public List<Book> TGetPopularBooksTechnology()
+        {
+            return _bookDal.GetPopularBooksTechnology();
+        }
+
         public Book TGetRandomBooks()
         {
             return _bookDal.GetRandomBooks();

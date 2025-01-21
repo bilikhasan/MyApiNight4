@@ -138,10 +138,6 @@
             </div>
         </header>
     </div><!--header-wrap-->
-
-
-
-
     @await Component.InvokeAsync("_DefaultBillboard")
 
 
@@ -424,84 +420,15 @@
                             </div>
                         </div>
 
-                        <div id="technology" data-tab-content>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="product-item">
-                                        <figure class="product-style">
-                                            <img src="images/tab-item1.jpg" alt="Books" class="product-item">
-                                            <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
-                                                Add to
-                                                Cart
-                                            </button>
-                                        </figure>
-                                        <figcaption>
-                                            <h3>Peaceful Enlightment</h3>
-                                            <span>Marmik Lama</span>
-                                            <div class="item-price">$ 40.00</div>
-                                        </figcaption>
-                                    </div>
-                                </div>
 
-                                <div class="col-md-3">
-                                    <div class="product-item">
-                                        <figure class="product-style">
-                                            <img src="images/tab-item3.jpg" alt="Books" class="product-item">
-                                            <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
-                                                Add to
-                                                Cart
-                                            </button>
-                                        </figure>
-                                        <figcaption>
-                                            <h3>Great travel at desert</h3>
-                                            <span>Sanchit Howdy</span>
-                                            <div class="item-price">$ 40.00</div>
-                                        </figcaption>
-                                    </div>
-                                </div>
 
-                                <div class="col-md-3">
-                                    <div class="product-item">
-                                        <figure class="product-style">
-                                            <img src="images/tab-item5.jpg" alt="Books" class="product-item">
-                                            <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
-                                                Add to
-                                                Cart
-                                            </button>
-                                        </figure>
-                                        <figcaption>
-                                            <h3>Life among the pirates</h3>
-                                            <span>Armor Ramsey</span>
-                                            <div class="item-price">$ 40.00</div>
-                                        </figcaption>
-                                    </div>
-                                </div>
 
-                                <div class="col-md-3">
-                                    <div class="product-item">
-                                        <figure class="product-style">
-                                            <img src="images/tab-item7.jpg" alt="Books" class="product-item">
-                                            <button type="button" class="add-to-cart" data-product-tile="add-to-cart">
-                                                Add to
-                                                Cart
-                                            </button>
-                                        </figure>
-                                        <figcaption>
-                                            <h3>Simple way of piece life</h3>
-                                            <span>Armor Ramsey</span>
-                                            <div class="item-price">$ 40.00</div>
-                                        </figcaption>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                       
-                        
-                        
-               
 
-                        
+
+                        @await Component.InvokeAsync("_DefaultGetPopularBooksTechnology")
+
+
                         @await Component.InvokeAsync("_DefaultGetPopularBooksRomantic")
                         @await Component.InvokeAsync("_DefaultGetPopularBooksAdventure")
                         @await Component.InvokeAsync("_DefaultGetPopularBooksBusiness")
