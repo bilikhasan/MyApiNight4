@@ -95,5 +95,12 @@ namespace MyApiNight4.WebApi.Controllers
             var values = _bookService.TGetPopularBooksFictional();
             return Ok(values);
         }
+
+        [HttpGet("GetPopularBooksAllGenre")]
+        public IActionResult GetPopularBooksAllGenre()
+        {
+            var values = _bookService.TGetPopularBooksAllGenre();
+            return Ok(values);
+        }
     }
 }

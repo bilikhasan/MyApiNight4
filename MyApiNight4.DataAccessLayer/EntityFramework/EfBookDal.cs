@@ -26,6 +26,13 @@ namespace MyApiNight4.DataAccessLayer.EntityFramework
             return values;
         }
 
+        public List<Book> GetPopularBooksAllGenre()
+        {
+            var context = new ApiContext();
+            var values = context.Books.ToList();
+            return values;
+        }
+
         public List<Book> GetPopularBooksBusiness()
         {
             var context = new ApiContext();
