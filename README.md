@@ -4,7 +4,9 @@ Bu proje, <b>M&Y Yazılım Eğitim Akademi Danışmanlık</b> bünyesinde, <b>Mu
 <h3>Proje Detayları</h3>
 BookSaw Projesi bir Kitap Yönetim Sistemi olup, modern bir API ve web uygulaması sunmaktadır. Proje, N-Tier Architecture prensiplerine tam uyumlu şekilde geliştirilmiştir.
 
-Katmanlı Mimari Yapısı
+
+<h3>N Katmanlı Mimari Yapısı</h3>
+
 📃 EntityLayer: Veritabanı tablolarını temsil eden entity sınıflarını içerir.
 
 🔎 DataAccessLayer: Veritabanı işlemlerini yönetir ve repository pattern'ini uygular.
