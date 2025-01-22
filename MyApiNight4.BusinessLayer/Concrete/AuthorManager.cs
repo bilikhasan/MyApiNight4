@@ -27,6 +27,16 @@ namespace MyApiNight4.BusinessLayer.Concrete
             return _authorDal.GetAll();
         }
 
+        public List<Author> TGetAllAuthors()
+        {
+            return _authorDal.GetAllAuthors();
+        }
+
+        public int TGetAuthorCount()
+        {
+            return _authorDal.GetAuthorCount();
+        }
+
         public Author TGetById(int id)
         {
             return _authorDal.GetById(id);

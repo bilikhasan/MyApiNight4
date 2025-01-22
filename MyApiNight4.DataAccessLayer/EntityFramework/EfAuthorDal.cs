@@ -16,5 +16,19 @@ namespace MyApiNight4.DataAccessLayer.EntityFramework
         public EfAuthorDal(ApiContext context) : base(context)
         {
         }
+
+        public List<Author> GetAllAuthors()
+        {
+            var context = new ApiContext();
+            var values = context.Authors.ToList();
+            return values;
+        }
+
+        public int GetAuthorCount()
+        {
+            var context = new ApiContext();
+            var values = context.Authors.Count();
+            return values;
+        }
     }
 }

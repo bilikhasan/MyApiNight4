@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "DashboardIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Yazarlar Kartı -->
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body text-center">
+                    <i class="fas fa-user-edit fa-3x"></i>
+                    <h5 class="card-title mt-3">Toplam Yazar Sayısı</h5>
+                    <a href="/Authors/AuthorList/" class="btn btn-light mt-3">@ViewBag.Authors</a>
+                </div>
+            </div>
+        </div>
+        <!-- Kitaplar Kartı -->
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body text-center">
+                    <i class="fas fa-book fa-3x"></i>
+                    <h5 class="card-title mt-3">Kitaplar</h5>
+                    <a href="/Books/BookList/" class="btn btn-light mt-3">Git</a>
+                </div>
+            </div>
+        </div>
+        <!-- Kategoriler Kartı -->
+        <div class="col-md-3">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-body text-center">
+                    <i class="fas fa-th-large fa-3x"></i>
+                    <h5 class="card-title mt-3">Kategoriler</h5>
+                    <a href="/Categories/CategoryList/" class="btn btn-light mt-3">Git</a>
+                </div>
+            </div>
+        </div>
+        <!-- Öne Çıkanlar Kartı -->
+        <div class="col-md-3">
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-body text-center">
+                    <i class="fas fa-star fa-3x"></i>
+                    <h5 class="card-title mt-3">Öne Çıkanlar</h5>
+                    <a href="/Features/FeatureList/" class="btn btn-light mt-3">Git</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            <style>
+
+    .card {
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body i {
+        transition: transform 0.3s;
+    }
+
+        .card-body i:hover {
+            transform: scale(1.2);
+        }
+
+            </style>

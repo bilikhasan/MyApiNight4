@@ -9,5 +9,8 @@ namespace MyApiNight4.DataAccessLayer.Abstract
 {
     public interface IAuthorDal :IGenericDal<Author>
     {
+        List<Author> GetAllAuthors();
+
+        int GetAuthorCount();
     }
 }

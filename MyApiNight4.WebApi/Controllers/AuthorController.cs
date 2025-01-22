@@ -48,5 +48,19 @@ namespace MyApiNight4.WebApi.Controllers
             var values = _authorService.TGetById(id);
             return Ok(values);
         }
+
+        [HttpGet("GetAllAuthors")]                              //APİ KATMANI
+        public IActionResult GetAllAuthors()
+        {
+            var values = _authorService.TGetAllAuthors();
+            return Ok(values);
+        }
+
+        [HttpGet("GetAuthorCount")]
+        public IActionResult GetAuthorCount()
+        {
+            var values = _authorService.TGetAuthorCount();
+            return Ok(values);
+        }
     }
 }

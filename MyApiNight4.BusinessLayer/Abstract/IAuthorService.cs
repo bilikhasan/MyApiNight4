@@ -9,5 +9,8 @@ namespace MyApiNight4.BusinessLayer.Abstract
 {
     public interface IAuthorService :IGenericService<Author>
     {
+        public List<Author> TGetAllAuthors();
+        public int TGetAuthorCount();
+
     }
 }
