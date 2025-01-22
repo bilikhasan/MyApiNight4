@@ -21,5 +21,7 @@ namespace MyApiNight4.DataAccessLayer.Abstract
 
         List<Book> GetPopularBooksAllGenre();
 
+        int GetBookCount();
+
     }
 }

@@ -10,13 +10,19 @@ using System.Threading.Tasks;
 
 namespace MyApiNight4.DataAccessLayer.EntityFramework
 {
-    public class EfFeatureDal :GenericRepository<Feature>, IFeatureDal
+    public class EfFeatureDal : GenericRepository<Feature>, IFeatureDal
     {
         private readonly ApiContext _context;
         public EfFeatureDal(ApiContext context) : base(context)
         {
+            _context = context;
         }
-
+        public int GetFeatureCount()
+        {
+            var context = new ApiContext();
+            var values = context.Features.Count();
+            return values;
+        }
         public List<Feature> GetLastFourBooks()
         {
             var context = new ApiContext();

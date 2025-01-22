@@ -11,5 +11,9 @@ namespace MyApiNight4.BusinessLayer.Abstract
     {
         public List<Feature> TGetLastFourBooks();
 
+
+
+        public int TGetFeatureCount();
+
     }
 }

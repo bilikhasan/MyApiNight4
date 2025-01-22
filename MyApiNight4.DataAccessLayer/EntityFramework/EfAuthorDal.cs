@@ -15,6 +15,7 @@ namespace MyApiNight4.DataAccessLayer.EntityFramework
         private readonly ApiContext _context;
         public EfAuthorDal(ApiContext context) : base(context)
         {
+            _context = context;
         }
 
         public List<Author> GetAllAuthors()

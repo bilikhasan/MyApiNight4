@@ -11,7 +11,7 @@
                 <div class="card-body text-center">
                     <i class="fas fa-user-edit fa-3x"></i>
                     <h5 class="card-title mt-3">Toplam Yazar Sayısı</h5>
-                    <a href="/Authors/AuthorList/" class="btn btn-light mt-3">@ViewBag.Authors</a>
+                    <a href="/Authors/AuthorList/" class="btn btn-light mt-3">@ViewBag.authorCount</a>
                 </div>
             </div>
         </div>
@@ -20,8 +20,8 @@
             <div class="card text-white bg-success mb-3">
                 <div class="card-body text-center">
                     <i class="fas fa-book fa-3x"></i>
-                    <h5 class="card-title mt-3">Kitaplar</h5>
-                    <a href="/Books/BookList/" class="btn btn-light mt-3">Git</a>
+                    <h5 class="card-title mt-3">Toplam Kitap Sayısı</h5>
+                    <a href="/Books/BookList/" class="btn btn-light mt-3">@ViewBag.bookCount</a>
                 </div>
             </div>
         </div>
@@ -30,8 +30,8 @@
             <div class="card text-white bg-warning mb-3">
                 <div class="card-body text-center">
                     <i class="fas fa-th-large fa-3x"></i>
-                    <h5 class="card-title mt-3">Kategoriler</h5>
-                    <a href="/Categories/CategoryList/" class="btn btn-light mt-3">Git</a>
+                    <h5 class="card-title mt-3">Toplam Kategori Sayısı</h5>
+                    <a href="/Categories/CategoryList/" class="btn btn-light mt-3">@ViewBag.categoryCount</a>
                 </div>
             </div>
         </div>
@@ -40,8 +40,8 @@
             <div class="card text-white bg-danger mb-3">
                 <div class="card-body text-center">
                     <i class="fas fa-star fa-3x"></i>
-                    <h5 class="card-title mt-3">Öne Çıkanlar</h5>
-                    <a href="/Features/FeatureList/" class="btn btn-light mt-3">Git</a>
+                    <h5 class="card-title mt-3">Öne Çıkanların Kitap Sayısı</h5>
+                    <a href="/Features/FeatureList/" class="btn btn-light mt-3">@ViewBag.featureCount</a>
                 </div>
             </div>
         </div>
@@ -49,8 +49,7 @@
 </div>
 
 
-            <style>
-
+<style>
     .card {
         border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -64,4 +63,4 @@
             transform: scale(1.2);
         }
 
-            </style>
+</style>

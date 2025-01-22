@@ -10,5 +10,8 @@ namespace MyApiNight4.DataAccessLayer.Abstract
     public interface IFeatureDal :IGenericDal<Feature>
     {
         List<Feature> GetLastFourBooks();
+
+
+        int GetFeatureCount();
     }
 }

@@ -19,6 +19,13 @@ namespace MyApiNight4.DataAccessLayer.EntityFramework
             _context = context;
         }
 
+        public int GetBookCount()
+        {
+            var context = new ApiContext();
+            var values = context.Books.Count();
+            return values;
+        }
+
         public List<Book> GetPopularBooksAdventure()
         {
             var context = new ApiContext();

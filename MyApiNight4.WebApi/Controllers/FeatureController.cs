@@ -57,5 +57,12 @@ namespace MyApiNight4.WebApi.Controllers
             var value = _featureService.TGetLastFourBooks();
             return Ok(value);
         }
+
+        [HttpGet("GetFeatureCount")]
+        public IActionResult GetFeatureCount()
+        {
+            var value = _featureService.TGetFeatureCount();
+            return Ok(value);
+        }
     }
 }
